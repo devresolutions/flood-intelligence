@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: 22
       - name: Probe official sources and build snapshot
+        env:
+          WINDY_POINT_FORECAST_API_KEY: ${{ secrets.WINDY_POINT_FORECAST_API_KEY }}
         run: node scripts/collect-live-data.mjs
       - name: Commit changed snapshot
         run: |
