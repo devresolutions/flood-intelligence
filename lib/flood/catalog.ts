@@ -5,6 +5,7 @@ export const sourceCatalog = [
   {id:'tmd',name:'Thai Meteorological Department',officialUrl:'https://www.tmd.go.th/',mode:'CREDENTIAL_OR_CONTRACT',freshMinutes:60},
   {id:'gistda',name:'GISTDA Flood',officialUrl:'https://disaster.gistda.or.th/services/open-api',mode:'API_KEY',freshMinutes:1440},
   {id:'road-flood',name:'Bangkok Road Flood',officialUrl:'https://data.go.th/',mode:'ENDPOINT_DISCOVERY',freshMinutes:30},
+  {id:'windy',name:'Windy Point Forecast',officialUrl:'https://api.windy.com/point-forecast/docs',mode:'API_KEY_PRODUCTION',freshMinutes:180},
 ] as const;
 
 export const targetLocation = {
