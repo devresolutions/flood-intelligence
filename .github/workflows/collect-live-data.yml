@@ -12,20 +12,36 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout collector source
+        uses: actions/checkout@v4
         with:
-          ref: data/live-snapshots
-      - uses: actions/setup-node@v4
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Probe official sources and build snapshot
+
+      - name: Collect official sources and Windy forecast
         env:
           WINDY_POINT_FORECAST_API_KEY: ${{ secrets.WINDY_POINT_FORECAST_API_KEY }}
         run: node scripts/collect-live-data.mjs
-      - name: Commit changed snapshot
+
+      - name: Publish latest snapshot to data branch
         run: |
+          cp public/data/latest.json /tmp/latest.json
+          git fetch origin data/live-snapshots || true
+          if git show-ref --verify --quiet refs/remotes/origin/data/live-snapshots; then
+            git checkout -B data/live-snapshots origin/data/live-snapshots
+          else
+            git checkout --orphan data/live-snapshots
+            git rm -rf . || true
+          fi
+          mkdir -p public/data
+          cp /tmp/latest.json public/data/latest.json
           git config user.name "flood-intelligence-bot"
           git config user.email "actions@users.noreply.github.com"
           git add public/data/latest.json
-          git diff --cached --quiet || git commit -m "data: refresh official source health"
-          git push origin HEAD:data/live-snapshots
+          git diff --cached --quiet || git commit -m "data: refresh live flood snapshot"
+          git push origin data/live-snapshots
