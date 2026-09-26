@@ -1,0 +1,360 @@
+{
+  "generatedAt": "2026-09-26T13:35:01.926Z",
+  "location": {
+    "name": "Khum Thong – Lam Toi Ting, Lat Krabang, Bangkok",
+    "latitude": 13.73,
+    "longitude": 100.83,
+    "radiusKm": 8
+  },
+  "risk": {
+    "state": "UNKNOWN",
+    "confidence": "LOW",
+    "reasons": [
+      "มี Windy point forecast เป็น forecast evidence; ยังไม่ใช้แทน observed rain/water sensors."
+    ]
+  },
+  "sources": [
+    {
+      "id": "bma-radar",
+      "name": "BMA Radar / DDS",
+      "url": "https://data.go.th/dataset/69-05-disaster",
+      "officialUrl": "https://data.go.th/dataset/69-05-disaster",
+      "kind": "catalog",
+      "state": "DEGRADED",
+      "checkedAt": "2026-09-26T13:35:01.926Z",
+      "latencyMs": 544,
+      "message": "Official source HTTP 403; live observations not accepted."
+    },
+    {
+      "id": "bma-water",
+      "name": "BMA Water Level",
+      "url": "https://data.go.th/th/dataset/flood",
+      "officialUrl": "https://data.go.th/th/dataset/flood",
+      "kind": "historical",
+      "state": "DEGRADED",
+      "checkedAt": "2026-09-26T13:35:01.926Z",
+      "latencyMs": 346,
+      "message": "Official source HTTP 403; live observations not accepted."
+    },
+    {
+      "id": "thaiwater",
+      "name": "ThaiWater / HII",
+      "url": "https://www.thaiwater.net/",
+      "officialUrl": "https://www.thaiwater.net/",
+      "kind": "catalog",
+      "state": "ENDPOINT_REQUIRED",
+      "checkedAt": "2026-09-26T13:35:01.926Z",
+      "latencyMs": 2226,
+      "message": "Official source reachable; machine-readable observation endpoint still requires verified adapter mapping."
+    },
+    {
+      "id": "tmd",
+      "name": "Thai Meteorological Department",
+      "url": "https://www.tmd.go.th/",
+      "officialUrl": "https://www.tmd.go.th/",
+      "kind": "credential",
+      "state": "UNAVAILABLE",
+      "checkedAt": "2026-09-26T13:35:01.926Z",
+      "latencyMs": 1983,
+      "message": "Probe failed: fetch failed"
+    },
+    {
+      "id": "gistda",
+      "name": "GISTDA Flood",
+      "url": "https://disaster.gistda.or.th/services/open-api",
+      "officialUrl": "https://disaster.gistda.or.th/services/open-api",
+      "kind": "apikey",
+      "state": "AUTH_REQUIRED",
+      "checkedAt": "2026-09-26T13:35:01.926Z",
+      "latencyMs": 5676,
+      "message": "Official API catalog reachable; API key is required before observations can be ingested."
+    },
+    {
+      "id": "road-flood",
+      "name": "Bangkok Road Flood",
+      "url": "https://data.go.th/",
+      "officialUrl": "https://data.go.th/",
+      "kind": "discovery",
+      "state": "DEGRADED",
+      "checkedAt": "2026-09-26T13:35:01.926Z",
+      "latencyMs": 1359,
+      "message": "Official source HTTP 403; live observations not accepted."
+    },
+    {
+      "id": "windy",
+      "name": "Windy Point Forecast",
+      "officialUrl": "https://api.windy.com/point-forecast/docs",
+      "checkedAt": "2026-09-26T13:35:01.926Z",
+      "state": "LIVE",
+      "latencyMs": 1635,
+      "latestObservedAt": "2026-09-26T13:35:01.926Z",
+      "message": "Windy GFS point forecast loaded for area anchor.",
+      "evidence": [
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-26T09:00:00.000Z",
+          "precipitation": 0,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-26T12:00:00.000Z",
+          "precipitation": 0,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-26T15:00:00.000Z",
+          "precipitation": 0.007250638314462952,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-26T18:00:00.000Z",
+          "precipitation": 0,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-26T21:00:00.000Z",
+          "precipitation": 0.0006344866054261104,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-27T00:00:00.000Z",
+          "precipitation": 0.00029617424695574737,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-27T03:00:00.000Z",
+          "precipitation": 0.00026334266182439093,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-27T06:00:00.000Z",
+          "precipitation": 0.00004107028412731495,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-27T09:00:00.000Z",
+          "precipitation": 0.00005440991241186792,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-27T12:00:00.000Z",
+          "precipitation": 0,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-27T15:00:00.000Z",
+          "precipitation": 0.0005460704977568352,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-27T18:00:00.000Z",
+          "precipitation": 0.00018603195898308882,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-27T21:00:00.000Z",
+          "precipitation": 0.00005756411023284509,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-28T00:00:00.000Z",
+          "precipitation": 0.000013405340739156889,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-28T03:00:00.000Z",
+          "precipitation": 0.0005499146763511629,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        },
+        {
+          "source": "windy",
+          "type": "FORECAST",
+          "forecastAt": "2026-09-28T06:00:00.000Z",
+          "precipitation": 0.0011915639393292573,
+          "convectivePrecipitation": null,
+          "model": "gfs"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-26T09:00:00.000Z",
+      "precipitation": 0,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-26T12:00:00.000Z",
+      "precipitation": 0,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-26T15:00:00.000Z",
+      "precipitation": 0.007250638314462952,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-26T18:00:00.000Z",
+      "precipitation": 0,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-26T21:00:00.000Z",
+      "precipitation": 0.0006344866054261104,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-27T00:00:00.000Z",
+      "precipitation": 0.00029617424695574737,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-27T03:00:00.000Z",
+      "precipitation": 0.00026334266182439093,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-27T06:00:00.000Z",
+      "precipitation": 0.00004107028412731495,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-27T09:00:00.000Z",
+      "precipitation": 0.00005440991241186792,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-27T12:00:00.000Z",
+      "precipitation": 0,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-27T15:00:00.000Z",
+      "precipitation": 0.0005460704977568352,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-27T18:00:00.000Z",
+      "precipitation": 0.00018603195898308882,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-27T21:00:00.000Z",
+      "precipitation": 0.00005756411023284509,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-28T00:00:00.000Z",
+      "precipitation": 0.000013405340739156889,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-28T03:00:00.000Z",
+      "precipitation": 0.0005499146763511629,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    },
+    {
+      "source": "windy",
+      "type": "FORECAST",
+      "forecastAt": "2026-09-28T06:00:00.000Z",
+      "precipitation": 0.0011915639393292573,
+      "convectivePrecipitation": null,
+      "model": "gfs"
+    }
+  ],
+  "limitations": [
+    "Forecast is not an observation of current flooding.",
+    "Windy is supplementary meteorological evidence and must be combined with BMA/ThaiWater/TMD/GISTDA/local water evidence.",
+    "No API secret is stored in this public repository.",
+    "Private home coordinates are intentionally not stored."
+  ]
+}
